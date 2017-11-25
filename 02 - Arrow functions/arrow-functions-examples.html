@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow functions examples</title>
+</head>
+<body>
+
+<script>
+  const race = '100m Dash';
+  const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+  // returning an object literal with the fat arrow function, wrap in ( )
+
+  const win = winners.map((winner, i) => ({name: winner, race: race, place: i + 1}));
+
+  
+//Example 2 - Implicit return with an object literal
+  const division = "Eastern NHL";
+  const teams = ["Leafs", "Wings", "Senators"];
+
+  const standings = teams.map((team, i) => ({name: team, division, place: i + 1 }));
+  console.table(standings);
+
+  // Example 3
+
+  const ages = [22,26,40,46,49,50,55,58,60,70];
+
+  //find everyone older then 50
+
+  const old = ages.filter(age => age > 50);
+  console.log(old);
+  
+
+</script>
+<!--<script>
+
+const race = '100m Dash';
+const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+
+const ages = [23,62,45,234,2,62,234,62,34];
+
+const old = ages.filter(age => age >= 60);
+console.log(old);
+
+</script> -->
+</body>
+</html>
